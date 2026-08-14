@@ -1,0 +1,29 @@
+# Uncomment and add the resource Group name
+#rg       = "kml_rg_main-cab2c8d8274d44b2"
+location = "eastus"
+cidr     = "10.0.0.0/16"
+subnets = {
+  web = "10.0.1.0/24"
+  app = "10.0.2.0/24"
+  db  = "10.0.3.0/24"
+}
+vnet = "VNET"
+nsg  = "NSG"
+vm   = "VM"
+ni   = "NI"
+kv   = "kv-app-platform-b6555b04"
+nsg_rules = {
+  https = {
+    priority = 100
+    port     = "443"
+    source   = "*"
+  }
+
+  ssh = {
+    priority = 110
+    port     = "22"
+    # Uncomment and add your public IP
+    # source   = "103.183.44.181/32"
+  }
+}
+app_secret = "lab_secret"
