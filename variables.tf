@@ -46,3 +46,8 @@ variable "app_secret" {
   type = string
   sensitive = true
 }
+
+variable "admin_ssh_public_key" {
+  description = "SSH public key used to access the VM"
+  type        = string
+}

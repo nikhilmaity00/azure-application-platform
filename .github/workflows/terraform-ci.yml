@@ -9,6 +9,9 @@ on:
     branches:
       - main
 
+env:
+  TF_VAR_admin_ssh_public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAITestKeyForCI terraform-ci"
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
